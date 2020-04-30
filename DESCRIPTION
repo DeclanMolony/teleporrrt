@@ -2,11 +2,17 @@ Package: teleporrrt
 Title: What the Package Does (One Line, Title Case)
 Version: 0.0.0.9000
 Authors@R: 
-    person(given = "Declan",
+    c(person(given = "Declan",
            family = "Molony",
            role = c("aut", "cre"),
            email = "dmolony@calpoly.edu",
            comment = c(ORCID = "YOUR-ORCID-ID"))
+    person(given = "Megan",
+           family = "von Sosen",
+           role = c("aut", "cre"),
+           email = "mvonsose@calpoly.edu",
+           comment = c(ORCID = "YOUR-ORCID-ID")))
+           
 Description: What the package does (one paragraph).
 License: `use_mit_license()`, `use_gpl3_license()` or friends to
     pick a license
