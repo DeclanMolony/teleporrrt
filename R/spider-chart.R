@@ -103,6 +103,7 @@ city_combine_df <- function(city1,city2) {
 #'
 #' @importFrom fmsb radarchart
 #' @importFrom graphics legend
+#' @importFrom grDevices rgb
 #'
 #' @export
 city_radarchart <- function(city1, city2) {
