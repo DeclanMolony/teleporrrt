@@ -25,6 +25,10 @@ city_lookup <- function() {
 #'
 #' @return An html link of the city's scores
 #'
+#' @examples
+#' city_link(city = "Dublin")
+#' city_link(city = "Hong Kong")
+#'
 #' @export
 city_link <- function(city) {
 
@@ -103,6 +107,7 @@ city_combine_df <- function(city1,city2) {
 #'
 #' @importFrom fmsb radarchart
 #' @importFrom graphics legend
+#' @importFrom grDevices rgb
 #'
 #' @export
 city_radarchart <- function(city1, city2) {
@@ -125,7 +130,7 @@ city_radarchart <- function(city1, city2) {
              cglwd=0.8,
              vlcex=0.8)
 
-  legend(x = 0.9, y = 1.5,
+  legend(x = 0.8, y = 1.2,
          legend = rownames(both_cities[-c(1,2),]),
          bty = "n", pch=20, col=colors_in,
          text.col = "black", cex=1.2, pt.cex=3)
