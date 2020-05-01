@@ -5,22 +5,3 @@ test_that("city_link() provides the Teleport API link to a specific city",{
 
   expect_equal(my_result, correct_result)
 })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
