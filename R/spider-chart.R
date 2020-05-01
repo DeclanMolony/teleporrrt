@@ -25,6 +25,10 @@ city_lookup <- function() {
 #'
 #' @return An html link of the city's scores
 #'
+#' @examples
+#' city_link(city = "Dublin")
+#' city_link(city = "Hong Kong")
+#'
 #' @export
 city_link <- function(city) {
 
