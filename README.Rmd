@@ -1,0 +1,48 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# teleporrrt
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+The goal of teleporrrt is to construct detailed visuals of the
+*Teleport API*
+
+## Installation
+
+You can install the development version from [GitHub](https://github.com/) with:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("DeclanMolony/teleporrrt")
+```
+```{r}
+library(teleporrrt)
+```
+
+
+## Cities in the Teleport API
+
+You can use the function `city_lookup()` to produce a dataframe of all the cities used in the Teleport API, and their html links.
+
+```{r}
+city_lookup()
+```
+
+
+
+
+
