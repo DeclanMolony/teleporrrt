@@ -125,7 +125,7 @@ city_radarchart <- function(city1, city2) {
              cglwd=0.8,
              vlcex=0.8)
 
-  legend(x = 0.9, y = 1.5,
+  legend(x = 0.8, y = 1.2,
          legend = rownames(both_cities[-c(1,2),]),
          bty = "n", pch=20, col=colors_in,
          text.col = "black", cex=1.2, pt.cex=3)
