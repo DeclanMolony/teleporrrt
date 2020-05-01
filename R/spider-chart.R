@@ -2,6 +2,9 @@
 #'
 #' @return A dataframe of cities and their links
 #'
+#' @importFrom httr GET
+#' @importFrom jsonlite fromJSON
+#'
 #' @export
 city_lookup <- function() {
 
@@ -43,6 +46,9 @@ city_link <- function(city) {
 #' @param city A city name, must be given as a string, the first letter must be capitalized
 #'
 #' @return A dataframe of a city's score of all 17 metrics
+#'
+#' @importFrom httr GET
+#' @importFrom jsonlite fromJSON
 #'
 #' @export
 city_dataframe <- function(city) {
@@ -94,6 +100,9 @@ city_combine_df <- function(city1,city2) {
 #'
 #' @param city1 A city name, must be given as a string, the first letter must be capitalized
 #' @param city2 A city name, must be given as a string, the first letter must be capitalized
+#'
+#' @importFrom fmsb radarchart
+#' @importFrom graphics legend
 #'
 #' @export
 city_radarchart <- function(city1, city2) {
