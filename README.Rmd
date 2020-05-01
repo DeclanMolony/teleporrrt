@@ -39,6 +39,7 @@ library(teleporrrt)
 You can use the function `city_lookup()` to produce a dataframe of all the cities used in the Teleport API, and their html links.
 
 ```{r}
+
 #city_lookup()
 ```
 
@@ -74,9 +75,6 @@ You can even create a radar/spider chart comparing two cities' scores
 ```{r, fig.width=10, fig.height=10}
 city_radarchart("Hong Kong","Detroit")
 ```
-
-
-
 
 
 
