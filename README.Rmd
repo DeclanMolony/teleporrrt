@@ -39,7 +39,7 @@ library(teleporrrt)
 You can use the function `city_lookup()` to produce a dataframe of all the cities used in the Teleport API, and their html links.
 
 ```{r}
-city_lookup()
+#city_lookup()
 ```
 
 
