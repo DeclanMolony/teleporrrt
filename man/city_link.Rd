@@ -17,3 +17,8 @@ An html link of the city's scores
 Gives the html link of a city in the Teleport API
 Use function city_lookup() to see available cities
 }
+\examples{
+city_link(city = "Dublin")
+city_link(city = "Hong Kong")
+
+}
