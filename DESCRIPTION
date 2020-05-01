@@ -1,21 +1,18 @@
 Package: teleporrrt
-Title: What the Package Does (One Line, Title Case)
+Title: Construct graphics for the Teleport API
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Declan",
            family = "Molony",
            role = c("aut", "cre"),
-           email = "dmolony@calpoly.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID"))
-    person(given = "Megan",
+           email = "dmolony@calpoly.edu"),
+      person(given = "Megan",
            family = "von Sosen",
-           role = c("aut", "cre"),
-           email = "mvonsose@calpoly.edu",
-           comment = c(ORCID = "YOUR-ORCID-ID")))
-           
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to
-    pick a license
+           role = c("aut"),
+           email = "mvonsose@calpoly.edu")
+           )
+Description: Functions create diverse graphics for the Teleport API
+License: file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
@@ -23,4 +20,8 @@ RoxygenNote: 7.1.0
 Suggests: 
     testthat
 Imports: 
-    magrittr
+    magrittr,
+    httr,
+    jsonlite,
+    fmsb,
+    graphics
