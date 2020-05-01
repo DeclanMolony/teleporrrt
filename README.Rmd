@@ -43,6 +43,42 @@ city_lookup()
 ```
 
 
+## Individual City Links
+
+You can use the function `city_link()` to produce an html link for a particular city's scores to be used for your own analysis:
+
+```{r}
+city_link("Dublin")
+```
+
+
+## Dataframes
+
+You can create a dataframe of a single city's Teleport metrics:
+
+```{r}
+city_dataframe("New York")
+```
+
+Or create a dataframe comparing two cities:
+
+```{r}
+city_combine_df("Cairo","Zurich")
+```
+
+
+## Spider Chart
+
+You can even create a radar/spider chart comparing two cities' scores
+
+```{r, fig.width=10, fig.height=10}
+city_radarchart("Hong Kong","Detroit")
+```
+
+
+
+
+
 
 
 
