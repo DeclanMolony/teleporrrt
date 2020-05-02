@@ -17,11 +17,16 @@
 #' @export
 nearest_city <- function(lat, lon){
 
-  response <- GET(paste0("https://api.teleport.org/api/locations/", lat, long, "/"))
+  response <- GET(paste0("https://api.teleport.org/api/locations/", lat, ",", lon, "/"))
 
-  content <- fromJSON(rawToChar(response$content))
+  content <- fromJSON(rawToChar(response$content))$`_embedded`$`location:nearest-cities`
 
-  nearest_df <- content$`_embedded`$`location:nearest-cities`
+  distance <- content$distance_km
+
+  nearest_city <- content$`_links`$`location:nearest-city`$name
+
+  nearest_df <- cbind(nearest_city, distance_km = distance)
 
   return(nearest_df)
+
 }
