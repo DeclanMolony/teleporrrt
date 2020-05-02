@@ -67,6 +67,13 @@ Or create a dataframe comparing two cities:
 city_combine_df("Cairo","Zurich")
 ```
 
+Or create a dataframe with the closest City to a given Longitude/Latitude coordinates
+
+```{r nearest_city}
+#Coordinates of the White House
+nearest_city(lat = 38.8977, lon = -77.0365)
+```
+
 
 ## Spider Chart
 
