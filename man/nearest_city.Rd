@@ -12,7 +12,7 @@ nearest_city(lat, lon)
 \item{lon}{the longitude position to search with}
 }
 \value{
-A data frame with html link, closest city name, and distance(km)
+A data frame with closest city name and distance(km)
 }
 \description{
 Gives the closest city and distance to a given location
