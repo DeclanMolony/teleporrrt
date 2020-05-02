@@ -25,6 +25,10 @@ nearest_city <- function(lat, lon){
 
   nearest_city <- content$`_links`$`location:nearest-city`$name
 
+  if(is.null(nearest_city)){
+    return("Invalid Lat/Lon coordinate")
+  }
+
   nearest_df <- cbind(nearest_city, distance_km = distance)
 
   return(nearest_df)
