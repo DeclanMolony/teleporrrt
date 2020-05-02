@@ -77,6 +77,13 @@ city_radarchart("Hong Kong","Detroit")
 ```
 
 
+## City Ratings
+
+You can input a list of cities you're interested in comparing based on cost of living, housing, or education, and find out which of the cities has the maximum rating and which has the minimum rating
+
+```{r}
+MaxMinRating(c("Toronto", "Vancouver"), "Cost of Living")
+```
 
 
 
