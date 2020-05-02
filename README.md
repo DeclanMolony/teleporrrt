@@ -1,19 +1,16 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-
-# teleporrrt
+teleporrrt
+==========
 
 <!-- badges: start -->
-
 <!-- badges: end -->
+The goal of teleporrrt is to construct detailed visuals of the *Teleport API*
 
-The goal of teleporrrt is to construct detailed visuals of the *Teleport
-API*
+Installation
+------------
 
-## Installation
-
-You can install the development version from
-[GitHub](https://github.com/) with:
+You can install the development version from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -24,28 +21,30 @@ devtools::install_github("DeclanMolony/teleporrrt")
 library(teleporrrt)
 ```
 
-## Cities in the Teleport API
+Cities in the Teleport API
+--------------------------
 
-You can use the function `city_lookup()` to produce a dataframe of all
-the cities used in the Teleport API, and their html links.
+You can use the function `city_lookup()` to produce a dataframe of all the cities used in the Teleport API, and their html links.
 
 ``` r
+
 #city_lookup()
 ```
 
-## Individual City Links
+Individual City Links
+---------------------
 
-You can use the function `city_link()` to produce an html link for a
-particular city’s scores to be used for your own analysis:
+You can use the function `city_link()` to produce an html link for a particular city's scores to be used for your own analysis:
 
 ``` r
 city_link("Dublin")
 #> [1] "https://api.teleport.org/api/urban_areas/slug:dublin/scores/"
 ```
 
-## Dataframes
+Dataframes
+----------
 
-You can create a dataframe of a single city’s Teleport metrics:
+You can create a dataframe of a single city's Teleport metrics:
 
 ``` r
 city_dataframe("New York")
@@ -83,12 +82,24 @@ city_combine_df("Cairo","Zurich")
 #> Zurich               4.9655    8.7845    5.401
 ```
 
-## Spider Chart
+Spider Chart
+------------
 
-You can even create a radar/spider chart comparing two cities’ scores
+You can even create a radar/spider chart comparing two cities' scores
 
 ``` r
 city_radarchart("Hong Kong","Detroit")
 ```
 
 <img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+
+City Ratings
+------------
+
+You can input a list of cities you're interested in comparing based on cost of living, housing, or education, and find out which of the cities has the maximum rating and which has the minimum rating
+
+``` r
+MaxMinRating(c("Toronto", "Vancouver"), "Cost of Living")
+#> [1] "Maximum cost of living rating: 5.271 (Toronto)"  
+#> [2] "Minimum cost of living rating: 5.259 (Vancouver)"
+```
