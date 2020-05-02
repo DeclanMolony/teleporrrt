@@ -18,7 +18,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of teleporrrt is to construct detailed visuals of the
+The goal of teleporrrt is to construct detailed visuals and analyze different features of the
 *Teleport API*
 
 ## Installation
