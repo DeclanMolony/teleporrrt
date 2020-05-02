@@ -21,7 +21,7 @@ nearest_city <- function(lat, lon){
 
   content <- fromJSON(rawToChar(response$content))$`_embedded`$`location:nearest-cities`
 
-  distance <- content$distance_km
+  distance <- as.numeric(content$distance_km)
 
   nearest_city <- content$`_links`$`location:nearest-city`$name
 
