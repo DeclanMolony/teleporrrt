@@ -10,6 +10,10 @@ Authors@R:
            family = "von Sosen",
            role = c("aut"),
            email = "mvonsose@calpoly.edu")
+      person(given = "Nathan",
+           family = "Johnson",
+           role = c("aut"),
+           email = "njohns60@calpoly.edu")
            )
 Description: Functions create diverse graphics for the Teleport API
 License: file LICENSE
