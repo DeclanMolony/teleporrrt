@@ -5,7 +5,7 @@ teleporrrt
 
 <!-- badges: start -->
 <!-- badges: end -->
-The goal of teleporrrt is to construct detailed visuals and analyze different features of the *Teleport API*
+The goal of teleporrrt is to construct detailed visuals and analyze different featuresof the *Teleport API*
 
 Installation
 ------------
