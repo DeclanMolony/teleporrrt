@@ -1,16 +1,19 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-teleporrrt
-==========
+
+# teleporrrt
 
 <!-- badges: start -->
+
 <!-- badges: end -->
-The goal of teleporrrt is to construct detailed visuals and analyze different featuresof the *Teleport API*
 
-Installation
-------------
+The goal of teleporrrt is to construct detailed visuals and convey
+information from the *Teleport API*
 
-You can install the development version from [GitHub](https://github.com/) with:
+## Installation
+
+You can install the development version from
+[GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
@@ -21,30 +24,37 @@ devtools::install_github("DeclanMolony/teleporrrt")
 library(teleporrrt)
 ```
 
-Cities in the Teleport API
---------------------------
+## Cities in the Teleport API
 
-You can use the function `city_lookup()` to produce a dataframe of all the cities used in the Teleport API, and their html links.
+You can use the function `city_lookup()` to produce a dataframe of all
+the cities used in the Teleport API, and their html links.
 
 ``` r
 
 #city_lookup()
 ```
 
-Individual City Links
----------------------
+Or you can use `cities_valid()` to check whether a particular city is in
+the Teleport API
 
-You can use the function `city_link()` to produce an html link for a particular city's scores to be used for your own analysis:
+``` r
+cities_valid(cities = "Constantinople")
+#> [1] "FALSE"
+```
+
+## Individual City Links
+
+You can use the function `city_link()` to produce an html link for a
+particular city’s scores to be used for your own analysis:
 
 ``` r
 city_link("Dublin")
 #> [1] "https://api.teleport.org/api/urban_areas/slug:dublin/scores/"
 ```
 
-Dataframes
-----------
+## Dataframes
 
-You can create a dataframe of a single city's Teleport metrics:
+You can create a dataframe of a single city’s Teleport metrics:
 
 ``` r
 city_dataframe("New York")
@@ -82,21 +92,31 @@ city_combine_df("Cairo","Zurich")
 #> Zurich               4.9655    8.7845    5.401
 ```
 
-Spider Chart
-------------
+Or create a dataframe with the closest City to a given
+Longitude/Latitude coordinates
 
-You can even create a radar/spider chart comparing two cities' scores
+``` r
+#Coordinates of the White House
+nearest_city(lat = 38.8977, lon = -77.0365)
+#>      nearest_city       distance_km 
+#> [1,] "Washington, D.C." "0.28774607"
+```
+
+## Spider Chart
+
+You can even create a radar/spider chart comparing two cities’ scores
 
 ``` r
 city_radarchart("Hong Kong","Detroit")
 ```
 
-<img src="man/figures/README-unnamed-chunk-7-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
 
-City Ratings
-------------
+## City Ratings
 
-You can input a list of cities you're interested in comparing based on cost of living, housing, or education, and find out which of the cities has the maximum rating and which has the minimum rating
+You can input a list of cities you’re interested in comparing based on
+cost of living, housing, or education, and find out which of the cities
+has the maximum rating and which has the minimum rating
 
 ``` r
 MaxMinRating(c("Toronto", "Vancouver"), "Cost of Living")
