@@ -41,6 +41,8 @@ nearest_city <- function(lat, lon){
 #'
 #' @return an html link for the salaries of the given area
 #'
+#' @importFrom dplyr %>%
+#'
 #' @examples
 #' area_link("San Diego")
 #' area_link("United States", "country")
