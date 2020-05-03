@@ -13,5 +13,5 @@ cities_valid(cities)
 A list of FALSE corresponding to each city given that is not valid
 }
 \description{
-This function can be faster than looking through the dataframe created by city_lookup()
+This function can be faster than looking through the dataframe created by city_lookup(). It produces \code{NULL} if the city is in the Teleport API, and produces \code{FALSE} if not.
 }

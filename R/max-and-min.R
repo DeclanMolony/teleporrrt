@@ -24,7 +24,7 @@ find_max_find_min <- function(citiesdf, locasecat){
 
 #' @title Checks if Valid Cities in the Teleport API are Given
 #'
-#' @description This function can be faster than looking through the dataframe created by city_lookup()
+#' @description This function can be faster than looking through the dataframe created by city_lookup(). It produces `NULL` if the city is in the Teleport API, and produces `FALSE` if not.
 #'
 #' @param cities A list of city names
 #'
