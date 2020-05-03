@@ -2,8 +2,7 @@
 % Please edit documentation in R/spider-chart.R
 \name{city_radarchart}
 \alias{city_radarchart}
-\title{Produces a Spider Chart comparing two cities' metrics from the Teleport API
-Use function city_lookup() to see available cities}
+\title{Produces a Spider Chart comparing two cities' metrics from the Teleport API}
 \usage{
 city_radarchart(city1, city2)
 }
@@ -13,6 +12,10 @@ city_radarchart(city1, city2)
 \item{city2}{A city name, must be given as a string, the first letter must be capitalized}
 }
 \description{
-Produces a Spider Chart comparing two cities' metrics from the Teleport API
 Use function city_lookup() to see available cities
+}
+\examples{
+city_radarchart("Winnipeg","Salt Lake City")
+city_radarchart("Rome","Glasgow")
+
 }
