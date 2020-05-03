@@ -30,8 +30,14 @@ You can use the function `city_lookup()` to produce a dataframe of all
 the cities used in the Teleport API, and their html links.
 
 ``` r
-
 #city_lookup()
+```
+
+You can use the function `country_lookup()` to produce a dataframe of
+all the countries used in the Teleport API, and their html links.
+
+``` r
+#country_lookup()
 ```
 
 Or you can use `cities_valid()` to check whether a particular city is in
@@ -50,6 +56,17 @@ particular city’s scores to be used for your own analysis:
 ``` r
 city_link("Dublin")
 #> [1] "https://api.teleport.org/api/urban_areas/slug:dublin/scores/"
+```
+
+You can use the function `area_link()` to produce an html link for a
+particular countries or cities salaries to be used for your own
+analysis:
+
+``` r
+area_link("San Diego")
+#> [1] "https://api.teleport.org/api/urban_areas/slug:san-diego/salaries/"
+area_link("United States", "country")
+#> [1] "https://api.teleport.org/api/countries/iso_alpha2:US/salaries/"
 ```
 
 ## Dataframes
@@ -92,7 +109,7 @@ city_combine_df("Cairo","Zurich")
 #> Zurich               4.9655    8.7845    5.401
 ```
 
-Or create a dataframe with the closest City to a given
+Or create a dataframe with the closest city to a given
 Longitude/Latitude coordinates
 
 ``` r
@@ -100,6 +117,22 @@ Longitude/Latitude coordinates
 nearest_city(lat = 38.8977, lon = -77.0365)
 #>      nearest_city       distance_km 
 #> [1,] "Washington, D.C." "0.28774607"
+```
+
+Or creaet a dataframe of the 25th, 50th, and 75th quantiles of salaries
+for a given city or country.
+
+``` r
+US_salary <- salaries_qt("United States", "country")
+
+head(US_salary)
+#>                  job_names percentile_25 percentile_50 percentile_75
+#> 1          Account Manager      48847.73      61157.96      76570.52
+#> 2               Accountant      46322.46      55013.10      65334.21
+#> 3 Administrative Assistant      28149.28      33900.14      40825.88
+#> 4                Architect      49398.82      61169.11      75743.91
+#> 5                 Attorney      61244.91      82706.83     111689.62
+#> 6         Business Analyst      53502.00      64180.18      76989.56
 ```
 
 ## Spider Chart
@@ -110,7 +143,7 @@ You can even create a radar/spider chart comparing two cities’ scores
 city_radarchart("Hong Kong","Detroit")
 ```
 
-<img src="man/figures/README-unnamed-chunk-8-1.png" width="100%" />
+<img src="man/figures/README-unnamed-chunk-11-1.png" width="100%" />
 
 ## City Ratings
 
