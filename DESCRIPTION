@@ -15,7 +15,7 @@ Authors@R:
            role = c("aut"),
            email = "njohns60@calpoly.edu")
            )
-Description: Functions create diverse graphics for the Teleport API
+Description: Functions for extracting information from the Teleport API
 License: file LICENSE
 Encoding: UTF-8
 LazyData: true
