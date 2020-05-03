@@ -18,8 +18,9 @@ city_lookup <- function() {
 
 }
 
-#' Gives the html link of a city in the Teleport API
-#' Use function city_lookup() to see available cities
+#' @title Gives the html link of a city in the Teleport API
+#'
+#' @description Use function city_lookup() to see available cities
 #'
 #' @param city A city name, must be given as a string, the first letter must be capitalized
 #'
@@ -44,12 +45,17 @@ city_link <- function(city) {
 
 }
 
-#' Creates a dataframe of a city's scores out of 10
-#' Use function city_lookup() to see available cities
+#' @title Creates a dataframe of a city's scores out of 10
+#'
+#' @description Use function city_lookup() to see available cities
 #'
 #' @param city A city name, must be given as a string, the first letter must be capitalized
 #'
 #' @return A dataframe of a city's score of all 17 metrics
+#'
+#' @examples
+#' city_dataframe(city = "Seattle")
+#' city_dataframe(city = "Zurich")
 #'
 #' @importFrom httr GET
 #' @importFrom jsonlite fromJSON
@@ -73,13 +79,18 @@ city_dataframe <- function(city) {
 
 }
 
-#' Merges dataframes created by city_dataframe() for two cities
-#' Use function city_lookup() to see available cities
+#' @title  Merges dataframes created by city_dataframe() for two cities
+#'
+#' @description  Use function city_lookup() to see available cities
 #'
 #' @param city1 A city name, must be given as a string, the first letter must be capitalized
 #' @param city2 A city name, must be given as a string, the first letter must be capitalized
 #'
 #' @return A merged dataframe along with metric minimums and maximums
+#'
+#' @examples
+#' city_combine_df("Hong Kong","San Luis Obispo")
+#' city_combine_df("Chicago","Detroit")
 #'
 #' @export
 city_combine_df <- function(city1,city2) {
@@ -99,11 +110,16 @@ city_combine_df <- function(city1,city2) {
 
 }
 
-#' Produces a Spider Chart comparing two cities' metrics from the Teleport API
-#' Use function city_lookup() to see available cities
+#' @title Produces a Spider Chart comparing two cities' metrics from the Teleport API
+#'
+#' @description Use function city_lookup() to see available cities
 #'
 #' @param city1 A city name, must be given as a string, the first letter must be capitalized
 #' @param city2 A city name, must be given as a string, the first letter must be capitalized
+#'
+#' @examples
+#' city_radarchart("Winnipeg","Salt Lake City")
+#' city_radarchart("Rome","Glasgow")
 #'
 #' @importFrom fmsb radarchart
 #' @importFrom graphics legend
