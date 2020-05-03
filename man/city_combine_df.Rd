@@ -2,8 +2,7 @@
 % Please edit documentation in R/spider-chart.R
 \name{city_combine_df}
 \alias{city_combine_df}
-\title{Merges dataframes created by city_dataframe() for two cities
-Use function city_lookup() to see available cities}
+\title{Merges dataframes created by city_dataframe() for two cities}
 \usage{
 city_combine_df(city1, city2)
 }
@@ -16,6 +15,10 @@ city_combine_df(city1, city2)
 A merged dataframe along with metric minimums and maximums
 }
 \description{
-Merges dataframes created by city_dataframe() for two cities
 Use function city_lookup() to see available cities
+}
+\examples{
+city_combine_df("Hong Kong","San Luis Obispo")
+city_combine_df("Chicago","Detroit")
+
 }
