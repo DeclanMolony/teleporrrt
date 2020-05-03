@@ -39,8 +39,13 @@ library(teleporrrt)
 You can use the function `city_lookup()` to produce a dataframe of all the cities used in the Teleport API, and their html links.
 
 ```{r}
-
 #city_lookup()
+```
+
+You can use the function `country_lookup()` to produce a dataframe of all the countries used in the Teleport API, and their html links.
+
+```{r}
+#country_lookup()
 ```
 
 Or you can use `cities_valid()` to check whether a particular city is in the Teleport API
@@ -58,6 +63,13 @@ You can use the function `city_link()` to produce an html link for a particular 
 city_link("Dublin")
 ```
 
+You can use the function `area_link()` to produce an html link for a particular countries or cities salaries to be used for your own analysis:
+
+```{r}
+area_link("San Diego")
+area_link("United States", "country")
+```
+
 
 ## Dataframes
 
@@ -73,13 +85,20 @@ Or create a dataframe comparing two cities:
 city_combine_df("Cairo","Zurich")
 ```
 
-Or create a dataframe with the closest City to a given Longitude/Latitude coordinates
+Or create a dataframe with the closest city to a given Longitude/Latitude coordinates
 
 ```{r nearest_city}
 #Coordinates of the White House
 nearest_city(lat = 38.8977, lon = -77.0365)
 ```
 
+Or creaet a dataframe of the 25th, 50th, and 75th quantiles of salaries for a given city or country.
+
+```{r}
+US_salary <- salaries_qt("United States", "country")
+
+head(US_salary)
+```
 
 ## Spider Chart
 
