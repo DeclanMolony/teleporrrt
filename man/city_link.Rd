@@ -2,8 +2,7 @@
 % Please edit documentation in R/spider-chart.R
 \name{city_link}
 \alias{city_link}
-\title{Gives the html link of a city in the Teleport API
-Use function city_lookup() to see available cities}
+\title{Gives the html link of a city in the Teleport API}
 \usage{
 city_link(city)
 }
@@ -14,7 +13,6 @@ city_link(city)
 An html link of the city's scores
 }
 \description{
-Gives the html link of a city in the Teleport API
 Use function city_lookup() to see available cities
 }
 \examples{
