@@ -2,8 +2,7 @@
 % Please edit documentation in R/spider-chart.R
 \name{city_dataframe}
 \alias{city_dataframe}
-\title{Creates a dataframe of a city's scores out of 10
-Use function city_lookup() to see available cities}
+\title{Creates a dataframe of a city's scores out of 10}
 \usage{
 city_dataframe(city)
 }
@@ -14,6 +13,10 @@ city_dataframe(city)
 A dataframe of a city's score of all 17 metrics
 }
 \description{
-Creates a dataframe of a city's scores out of 10
 Use function city_lookup() to see available cities
+}
+\examples{
+city_dataframe(city = "Seattle")
+city_dataframe(city = "Zurich")
+
 }
