@@ -41,8 +41,6 @@ nearest_city <- function(lat, lon){
 #'
 #' @return an html link for the salaries of the given area
 #'
-#' @importFrom magrittr %>%
-#'
 #' @examples
 #' area_link("San Diego")
 #' area_link("United States", "country")
@@ -54,11 +52,11 @@ area_link <- function(area, type = "city") {
 
     cities <- city_lookup()
 
-    link <- cities[cities$name == area,1] %>%
+    link <- cities[cities$name == area,1]
 
-      as.character() %>%
+    link <- as.character(link)
 
-      paste0("salaries/")
+    link <- paste0(link, "salaries/")
 
     return(link)
 
@@ -66,11 +64,11 @@ area_link <- function(area, type = "city") {
 
     countries <- country_lookup()
 
-    link <- countries[countries$name == area,1] %>%
+    link <- countries[countries$name == area,1]
 
-      as.character() %>%
+    link <- as.character(link)
 
-      paste0("salaries/")
+    link <- paste0(link, "salaries/")
 
     return(link)
 
