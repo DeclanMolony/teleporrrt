@@ -125,7 +125,7 @@ country_lookup <- function() {
 #' @export
 salaries_qt <- function(area, type = "city") {
 
-  response <- GET(area_link2(area, type))
+  response <- GET(area_link(area, type))
 
   content <- fromJSON(rawToChar(response$content))
 
