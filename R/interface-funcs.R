@@ -54,6 +54,10 @@ area_link <- function(area, type = "city") {
 
     link <- cities[cities$name == area,1]
 
+    if (identical(link, character(0))) {
+      return("Invalid city name")
+    }
+
     link <- as.character(link)
 
     link <- paste0(link, "salaries/")
@@ -65,6 +69,10 @@ area_link <- function(area, type = "city") {
     countries <- country_lookup()
 
     link <- countries[countries$name == area,1]
+
+    if (identical(link, character(0))) {
+      return("Invalid country name")
+    }
 
     link <- as.character(link)
 
