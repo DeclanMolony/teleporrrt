@@ -43,6 +43,12 @@ You can use the function `city_lookup()` to produce a dataframe of all the citie
 #city_lookup()
 ```
 
+Or you can use `cities_valid()` to check whether a particular city is in the Teleport API
+
+```{r}
+cities_valid(cities = "Constantinople")
+```
+
 
 ## Individual City Links
 
