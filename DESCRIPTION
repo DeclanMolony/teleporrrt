@@ -1,5 +1,5 @@
 Package: teleporrrt
-Title: Construct graphics for the Teleport API
+Title: Pulls out information and creates graphics for the Teleport API
 Version: 0.0.0.9000
 Authors@R: 
     c(person(given = "Declan",
