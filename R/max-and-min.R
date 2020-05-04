@@ -30,13 +30,17 @@ find_max_find_min <- function(citiesdf, locasecat){
 #'
 #' @return A list of FALSE corresponding to each city given that is not valid
 #'
-#' @importFrom httr GET
+#' @importFrom httr GET http_type
 #' @importFrom jsonlite fromJSON
 #'
 #' @export
 cities_valid = function(cities){
 
   validCities = GET("https://developers.teleport.org/assets/urban_areas.json")
+
+  if (http_type(validCities) != "application/json") {
+    stop("API did not return json", call. = FALSE)
+  }
 
   citieslist = fromJSON(rawToChar(validCities$content))
 
