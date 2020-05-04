@@ -119,7 +119,7 @@ nearest_city(lat = 38.8977, lon = -77.0365)
 #> [1,] "Washington, D.C." "0.28774607"
 ```
 
-Or creaet a dataframe of the 25th, 50th, and 75th quantiles of salaries
+Or create a dataframe of the 25th, 50th, and 75th quantiles of salaries
 for a given city or country.
 
 ``` r
